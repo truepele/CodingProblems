@@ -16,7 +16,7 @@ namespace LeetCode.Tests.Algorithms.Easy.TwoSum
         [InlineData(new []{ 5,3,2,8 }, 11, 1, 3)]
         [InlineData(new []{ 1,3,5,7,8 }, 10, 1, 3)]
         [InlineData(new []{ 1,15,5,-5,8 }, 10, 1, 3)]
-        public void FindTwoEqualElements_ReturnsExpected(int[] input, int target, int firstExpectedIndex, int secondExpectedIndex)
+        public void TwoSum_ReturnsExpected(int[] input, int target, int firstExpectedIndex, int secondExpectedIndex)
         {
             // Act
             var (firstIndex, secondIndex) = TwoSumSolution.TwoSum(input, target);
