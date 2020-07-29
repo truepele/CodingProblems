@@ -1,7 +1,7 @@
 using LeetCode.Algorithms.Easy.ReverseInteger;
 using Xunit;
 
-namespace LeetCode.Tests.Algorithms.Easy.TwoSum
+namespace LeetCode.Tests.Algorithms.Easy.ReverseInteger
 {
     public class ReverseIntegerSolutionTests
     {
