@@ -1,4 +1,6 @@
-﻿namespace LeetCode.Algorithms.Easy.UnivaluedBinaryTree
+﻿using LeetCode.Common;
+
+namespace LeetCode.Algorithms.Easy.UnivaluedBinaryTree
 {
     /// <summary>
     /// #965 Univalued Binary Tree

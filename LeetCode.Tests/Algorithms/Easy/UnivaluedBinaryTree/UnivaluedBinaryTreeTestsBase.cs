@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using LeetCode.Algorithms.Easy;
 using LeetCode.Algorithms.Easy.UnivaluedBinaryTree;
+using LeetCode.Common;
 using Xunit;
 
 namespace LeetCode.Tests.Algorithms.Easy.UnivaluedBinaryTree
@@ -12,7 +13,7 @@ namespace LeetCode.Tests.Algorithms.Easy.UnivaluedBinaryTree
         public void IsUnivalTree_Returns_Expected(int?[] tree, bool expectedResult)
         {
             // Act
-            var result = GetImplementation().IsUnivalTree(CreateTree(tree, 0));
+            var result = GetImplementation().IsUnivalTree(Tree.CreateTree(tree));
 
             // Assert
             Assert.Equal(expectedResult, result);
@@ -38,35 +39,5 @@ namespace LeetCode.Tests.Algorithms.Easy.UnivaluedBinaryTree
             new [] { -2, 2, 0 },
             new [] { int.MinValue, -1, int.MaxValue },*/
         };
-
-
-        private TreeNode CreateTree(int?[] nodeValues, int start)
-        {
-            var i = start;
-
-            if (i >= nodeValues.Length || nodeValues[i] == null)
-            {
-                return null;
-            }
-
-            var result = new TreeNode(nodeValues[start].Value);
-
-            if (i++ >= nodeValues.Length)
-            {
-                return result;
-            }
-
-            result.left = CreateTree(nodeValues, i);
-
-            if (i++ >= nodeValues.Length)
-            {
-                return result;
-            }
-
-            result.right = CreateTree(nodeValues, i);
-
-            return result;
-        }
-
     }
 }
